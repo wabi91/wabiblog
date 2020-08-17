@@ -161,12 +161,12 @@ insertionSort([9,8,3,5,6,1]);
 
 ```javascript
 function bubbleSort(arr) {
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let swap;
     // 내부에서 arr[j] arr[j + 1] 을 비교할 예정으로 arr -1 -i까지 순회를 한다.
     // 배열의 마지막 값은 순회에 이미 포함이 되므로 -1 하고
     // 한번의 순회로 하나의 값이 정렬되므로 i 만큼 빼준다.
-    for (let j = 0; j < length -1 -i; j++) {
+    for (let j = 0; j < arr.length -1 -i; j++) {
       if (arr[j] > arr[j + 1]) {
         swap = arr[j];
         arr[j] = arr[j + 1];
@@ -175,7 +175,7 @@ function bubbleSort(arr) {
     }
     
     // swap 변수가 undefiend 일 경우는 정렬이 완료되었으므로, for문을 종료
-    if (!swap) {
+    if (swap === undefined) {
       break;
     }
   }
