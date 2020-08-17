@@ -1,5 +1,5 @@
 ---
-title: quick-sort
+title: "Quick Sort : 퀵 정렬"
 date: 2020-08-17 18:08:48
 category: algorithm
 thumbnail: { thumbnailSrc }
