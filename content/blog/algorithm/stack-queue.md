@@ -111,3 +111,12 @@ test.dequeue(); // 2
 
 test.contains(1); // false
 ```
+
+-----
+
+### 출처
+https://www.cs.cmu.edu/~adamchik/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html
+
+https://helloworldjavascript.net/pages/282-data-structures.html
+
+https://velog.io/@raram2/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-%EC%8A%A4%ED%83%9D%EA%B3%BC-%ED%81%90-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-Stack-Queue
