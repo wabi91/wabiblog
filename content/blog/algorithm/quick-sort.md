@@ -113,3 +113,9 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 pivot이 가장 작은 수이거나 가장 큰 수일 경우에는 두 배열로 나누더라도 한쪽은 항상 비어있고 한쪽은 꽉 차있으므로 최악의 경우에 해당한다.
 
 성능은 최악의 경우 O<sub>(n<sup>2</sup>)</sub>이지만 최악의 경우를 제외하면 O<sub>(n log<sub>2</sub> n)</sub> 시간복잡도로, 최악의경우가 나오는 경우는 아주 희박하기 때문에 O<sub>(n log<sub>2</sub> n)</sub>으로 취급하고 같은 O<sub>(n log<sub>2</sub> n)</sub>이지만 합병 정렬보다는 두 배 빠르기 때문에 더 자주 쓰이는 알고리즘 기법이다.
+
+---
+
+### 출처
+
+https://www.guru99.com/quicksort-in-javascript.html
