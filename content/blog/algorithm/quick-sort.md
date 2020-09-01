@@ -109,7 +109,9 @@ function quickSort(arr, leftIndex = 0, rightIndex = arr.length - 1) {
 
 로그는 아래와 같다.
 
-![](./images/quick-sort-log.png)
+<div style="text-align:left;">
+  <img src="./images/quick-sort-log.png">
+</div>
 
 ### 시간복잡도
 
