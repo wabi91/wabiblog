@@ -119,3 +119,5 @@ pivot이 가장 작은 수이거나 가장 큰 수일 경우에는 두 배열로
 ### 출처
 
 https://www.guru99.com/quicksort-in-javascript.html
+
+https://im-developer.tistory.com/135
