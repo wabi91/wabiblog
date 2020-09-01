@@ -34,7 +34,8 @@ draft: false
 
 #### Javascript 코드 예시
 
-```javascript : Max Heap
+```javascript
+// Max Heap
 class BinaryHeap {
   constructor() {
     this.heap = [30, 20, 10, 7, 9, 5];
