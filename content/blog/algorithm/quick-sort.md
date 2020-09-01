@@ -59,6 +59,10 @@ quickSort([5,1,1,2,0,0]);
 
 ### Quick sort, 제자리 정렬 방식 : 부가적 메모리 공간 불필요
 
+<div style="background:#fff; border: 1px solid #fff; border-radius: 5px;">
+  <img src="./images/quick-sort-example.png">
+</div>
+
 ```javascript
 
 function divide(arr, leftIndex, rightIndex, pivot) {
