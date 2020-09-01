@@ -61,43 +61,43 @@ quickSort([5,1,1,2,0,0]);
 
 ```javascript
 
-function divide(arr, left, right, pivot) {
+function divide(arr, leftIndex, rightIndex, pivot) {
   // 왼쪽 인덱스가 오른쪽 인덱스와 같거나 적을때 까지
-  while (left <= right) {
+  while (leftIndex <= rightIndex) {
     // pivot 보다 작은 값을 찾을때까지 왼쪽에서 오른쪽으로 이동
-    while (arr[left] < pivot) {
-      left++;
+    while (arr[leftIndex] < pivot) {
+      leftIndex++;
     }
     // pivot 보다 큰 값을 찾을때까지 오른쪽에서 왼쪽으로 이동
-    while (arr[right] > pivot) {
-      right--;
+    while (arr[rightIndex] > pivot) {
+      rightIndex--;
     }
     // 왼쪽값과 오른쪽값을 교체하고, 다음 왼쪽 숫자 + 오른쪽 숫자 인덱싱
-    if (left <= right) {
-      let swap = arr[left];
-      arr[left] = arr[right];
-      arr[right] = swap;
-      left++;
-      right--;
+    if (leftIndex <= rightIndex) {
+      let swap = arr[leftIndex];
+      arr[leftIndex] = arr[rightIndex];
+      arr[rightIndex] = swap;
+      leftIndex++;
+      rightIndex--;
     }
   }
-  return left;
+  return leftIndex;
 }
 
-function quickSort(arr, left = 0, right = arr.length - 1) {
+function quickSort(arr, leftIndex = 0, rightIndex = arr.length - 1) {
   // 왼쪽 값 인덱스가 오른쪽 값의 인덱스를 같거나 크게되면 종료
-  if (left >= right) {
+  if (leftIndex >= rightIndex) {
     return;
   }
 
-  const mid = Math.floor((left + right) / 2);
+  const mid = Math.floor((leftIndex + rightIndex) / 2);
   const pivot = arr[mid];
   // 다음 분기가 될 인덱스 값
-  const partition = divide(arr, left, right, pivot);
+  const partition = divide(arr, leftIndex, rightIndex, pivot);
 
   // partiyion 을 기준으로 왼쪽 오른쪽 나누고 분기하여 재귀 quick sort
-  quickSort(arr, left, partition - 1);
-  quickSort(arr, partition, right);
+  quickSort(arr, leftIndex, partition - 1);
+  quickSort(arr, partition, rightIndex);
   
   return arr;
 }
