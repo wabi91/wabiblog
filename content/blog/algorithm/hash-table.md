@@ -15,7 +15,7 @@ draft: false
 <table>
   <tbody>
     <tr>
-      <td>
+      <td style="width: 50%">
         <div>
           <li>해시 함수와 배열을 결합해서 만든다.</li>
           <li>충돌을 줄일 수록 좋은 해시 테이블이 생성되므로, 충돌을 줄이는 해시 함수가 있어야 한다.</li>
@@ -26,7 +26,7 @@ draft: false
           <li>중복을 잡아내는데 뛰어나다.</li>
         </div>
       </td>
-      <td>
+      <td style="width: 50%">
         <div style="background:#fff; border: 1px solid #fff; border-radius: 5px;">
           <img src="./images/hash-table.png">
         </div>
