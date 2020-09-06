@@ -184,7 +184,8 @@ testTable.print();
 testTable.remove('testD');
 ```
 
-`print()`를 하면 아래와 같다.
+`print()`를 하면 아래와 같다.<br/>
+
 |remove 'testD' 이전 print|remove 'testD' 이후 print|
 |:-:|:-:|
 |![](./images/hash-table-items.png)|![](./images/hash-table-after-remove-item.png)|
