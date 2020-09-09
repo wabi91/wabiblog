@@ -26,7 +26,7 @@ draft: false
 npm download 수치를 보면 React가 월등히 높은 것을 볼 수 있습니다. (*Star 수는 Vue가 더 높습니다...)<br/>
 [출처 : npm trends](https://www.npmtrends.com/angular-vs-react-vs-vue)
 
->[2019 State of JavaScript report](https://2019.stateofjs.com/front-end-frameworks/) 를 보면, 설문에 참여한 개발자 중 71%가 `React를 다시 사용했으며 다시 사용할 것` 이라고 말한 것으로 가장 높은 수치이고, Vue가 40%, Angular가 21%인 순서를 보입니다.
+>[2019 State of JavaScript report](https://2019.stateofjs.com/front-end-frameworks/) 를 보면, 설문에 참여한 개발자 중 71%가 `React를 사용했으며 다시 사용할 것` 이라고 말한 것으로 가장 높은 수치이고, Vue가 40%, Angular가 21%인 순서를 보입니다.
 
 &nbsp;&nbsp;또한, 책상 앞에 앉아 열심히 일하는 개발자가 몸값을 올리기 위해 또는 개발 회사의 중요 부품(?)이 되기 위한다면 인기가 많은 기술을 고르는 것도 좋은 이유가 될 수 있다고 생각합니다.
 > [Google > Frontend framework job trend](https://trends.google.com/trends/explore?cat=31&q=Vue%20jobs,React%20jobs,Angular%20jobs) 수요는 Vue가 가장 낮습니다.
