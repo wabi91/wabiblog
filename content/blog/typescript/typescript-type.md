@@ -104,6 +104,30 @@ const test2 = (c: TestA & TestB) => {
   c.c; // number
   c.d; // true
 };
+
+interface Foo {
+  foo: string;
+  xyz: string;
+}
+
+interface Bar {
+  bar: string;
+  xyz: string;
+}
+
+// 합집합 유니온(union)
+const sayHello1 = (obj: Foo | Bar) => { /* ... */ };
+
+sayHello1({ foo: "foo", xyz: "xyz" });
+sayHello1({ bar: "bar", xyz: "xyz" });
+
+// 교집합 인터섹션(intersection)
+const sayHello2 = (obj: Foo & Bar) => { /* ... */ };
+
+sayHello2({ foo: "foo", bar: "bar", xyz: "xyz" });
+sayHello2({ bar: "bar", xyz: "xyz" }); // Ts error
+// Argument of type '{ bar: string; xyz: string; }' is not assignable to parameter of type 'Foo & Bar'.
+// Property 'foo' is missing in type '{ bar: string; xyz: string; }' but required in type 'Foo'.
 ```
 
 ### 튜플
