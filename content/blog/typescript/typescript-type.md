@@ -67,7 +67,7 @@ if (randomFlag) {
 }
 ```
 
-#### 합집합 유니온(union), 교집합 인터섹션(intersection)
+#### 유니온(union), 인터섹션(intersection)
 
 타입스크립트 타입에 연산자 `유니온(|), 인터섹션(&)` 을 지원한다.
 
@@ -83,7 +83,7 @@ type TestB = {
   d: true;
 };
 
-// 합집합 유니온(union)
+// 유니온(union)
 const test1 = (c: TestA | TestB) => {
   c.a; // number
   c.b; // Ts Error
@@ -97,7 +97,7 @@ const test1 = (c: TestA | TestB) => {
     // Property 'd' does not exist on type 'TestA'.
 };
 
-// 교집합 인터섹션(intersection)
+// 인터섹션(intersection)
 const test2 = (c: TestA & TestB) => {
   c.a; // number
   c.b; // string
@@ -115,13 +115,13 @@ interface Bar {
   xyz: string;
 }
 
-// 합집합 유니온(union)
+// 유니온(union)
 const sayHello1 = (obj: Foo | Bar) => { /* ... */ };
 
 sayHello1({ foo: "foo", xyz: "xyz" });
 sayHello1({ bar: "bar", xyz: "xyz" });
 
-// 교집합 인터섹션(intersection)
+// 인터섹션(intersection)
 const sayHello2 = (obj: Foo & Bar) => { /* ... */ };
 
 sayHello2({ foo: "foo", bar: "bar", xyz: "xyz" });
