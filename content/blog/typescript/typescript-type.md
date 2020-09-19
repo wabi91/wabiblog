@@ -72,7 +72,6 @@ if (randomFlag) {
 타입스크립트 타입에 연산자 `유니온(|), 인터섹션(&)` 을 지원한다.
 
 ```typescript
-// 유니온, 합집합, |
 type TestA = {
   a: number;
   b: string;
@@ -84,47 +83,26 @@ type TestB = {
   d: true;
 };
 
-// TestA
-let a: (TestA | TestB) = {
-  a: 1,
-  b: 'b',
+// 합집합 유니온(union)
+const test1 = (c: TestA | TestB) => {
+  c.a; // number
+  c.b; // Ts Error
+  // Property 'b' does not exist on type 'TestA | TestB'.
+    // Property 'b' does not exist on type 'TestB'.
+  c.c; // Ts Error
+  // Property 'c' does not exist on type 'TestA | TestB'.
+    // Property 'c' does not exist on type 'TestA'.
+  c.d; // Ts Error
+  // Property 'd' does not exist on type 'TestA | TestB'.
+    // Property 'd' does not exist on type 'TestA'.
 };
 
-// TestB
-let a = {
-  a: 1,
-  c: 2,
-  d: true,
-};
-
-// both A, B
-let ab = {
-  a: 1,
-  b: 'b',
-  c: 2,
-  d: true,
-};
-```
-
-```typescript
-// 인터섹션, 교집합, &
-type TestA = {
-  a: number;
-  b: string;
-};
-
-type TestB = {
-  a: number;
-  c: number;
-  d: true;
-};
-
-// both A, B
-let a: TestA & TestB = {
-  a: 1,
-  b: 'b',
-  c: 2,
-  d: true,
+// 교집합 인터섹션(intersection)
+const test2 = (c: TestA & TestB) => {
+  c.a; // number
+  c.b; // string
+  c.c; // number
+  c.d; // true
 };
 ```
 
