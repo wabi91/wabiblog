@@ -120,7 +120,7 @@ type TestB = {
 };
 
 // both A, B
-let a = {
+let a: TestA & TestB = {
   a: 1,
   b: 'b',
   c: 2,
