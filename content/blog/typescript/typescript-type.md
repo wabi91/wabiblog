@@ -118,7 +118,14 @@ let b: [string, number, ...boolean[]] = ['a', 1, true, false, true];
 ```typescript
 let a: readonly number[] = [1, 2, 3];
 let b: readonly number[] = a.concat(4);
-// .push, .splice 처럼 내용을 바꾸는 메서드가 아닌 .concat, .slice 같은 내용을 바꾸지 않는 메서드를 써야한다.
+
+type Tuple = readonly [boolean, number];
+
+const tuple: Tuple = [true, 2];
+tuple.push(444); // Ts error
+// Property 'push' does not exist on type 'readonly [boolean, number]'.
+// .push, .splice 처럼 내용을 바꾸는 메서드가 아닌
+// .concat, .slice 같은 내용을 바꾸지 않는 메서드를 써야한다.
 
 let c: readonly [number, boolean] = [1, true];
 ```
