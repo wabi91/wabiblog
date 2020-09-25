@@ -1,5 +1,5 @@
 ---
-title: "타입스크립트의 타입정의"
+title: "TS, 타입정의"
 date: 2020-09-18 07:19:39
 category: typescript
 thumbnail: { thumbnailSrc }

@@ -1,5 +1,5 @@
 ---
-title: "타입스크립트 소개 및 설정"
+title: "TS, 소개 및 설정"
 date: 2020-09-11 22:09:51
 category: typescript
 thumbnail: { thumbnailSrc }
