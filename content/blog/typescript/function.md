@@ -100,7 +100,7 @@ const createElement: CreateElement = (tag: string): HTMLElement => {
   // ...
 };
 
-// 다향성
+// 다형성
 
 type Filter = {
   (arr: string[], func: (item: string) => boolean): string[]
@@ -116,7 +116,7 @@ type Filter<T> = {
 };
 let filter: Filter<number>
 
-// 상한선을 둔 다향성 표현
+// 상한선을 둔 다형성 표현
 
 type HasSides = { numberOfSides: number };
 type SidesHaveLength = { sideLength: number };
@@ -164,7 +164,7 @@ function map<T, U>(array: T[], func: (item: T) => U): U[] {
 arguments 객체는 안전성을 제공하지 않는다.<br/>
 해당 인수는 모두 any타입으로 추론이되고, 이 문제를 나머지 매개변수로 해결이 가능하다<br/>
 
-#### 타입 다향성 & 나머지 매개변수 에 대한 정리
+#### 타입 다형성 & 나머지 매개변수 에 대한 정리
 
 ```typescript
 is(5, 5); // true
@@ -173,6 +173,7 @@ is(1, '1'); // Argument of type '"1"' is not assignable to parameter of type 'nu
 is('1', 1); // Argument of type '1' is not assignable to parameter of type 'string'.
 is(true, true, true, true, true, true, true); // true
 is([1], [1,3], [1,2,3,4]); // false
+is([1], [1]); // false, [1] === [1] false 이기 때문
 ```
 
 위와 같은 결과가 나오도록 타입 시그니처를 갖춘 함수를 아래와 같이 나타낸다.
