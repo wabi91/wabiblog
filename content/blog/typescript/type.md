@@ -6,10 +6,10 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-### 타입스크립트의 타입 계층
+## 타입스크립트의 타입 계층
 ![](./images/type-hierarchy.png)
 
-### 타입스크립트의 값 타입 추론
+## 타입스크립트의 값 타입 추론
 
 ```typescript
 let a = 3099; // number
@@ -28,7 +28,7 @@ let, const 로 타입 추론에 있어서 차이
 
 > 단, const 로 값을 정의해도, array와 object는 내부 타입, 좁은타입 추론은 하지 않는다.
 
-### 인덱스 시그니처 (index signature)
+## 인덱스 시그니처 (index signature)
 
 `[key: T]: U` 문법으로 타입스크립트에 어떤 객체가 여러 키를 가질 수 있음을 알려준다.
 
@@ -41,7 +41,7 @@ let testObj: {
 };
 ```
 
-### 타입별칭, 유니온, 인터섹션
+## 타입별칭, 유니온, 인터섹션
 
 ```typescript
 type Name = string;
@@ -67,7 +67,7 @@ if (randomFlag) {
 }
 ```
 
-#### 유니온(union), 인터섹션(intersection)
+### 유니온(union), 인터섹션(intersection)
 
 타입스크립트 타입에 연산자 `유니온(|), 인터섹션(&)` 을 지원한다.
 
@@ -130,7 +130,7 @@ sayHello2({ bar: "bar", xyz: "xyz" }); // Ts error
 // Property 'foo' is missing in type '{ bar: string; xyz: string; }' but required in type 'Foo'.
 ```
 
-### 튜플
+## 튜플
 
 ```typescript
 let a: [number] = [1];
@@ -154,7 +154,7 @@ tuple.push(444); // Ts error
 let c: readonly [number, boolean] = [1, true];
 ```
 
-### null, undefined, void, never
+## null, undefined, void, never
 
 |타입|의미|
 |:--|:--|
@@ -162,3 +162,7 @@ let c: readonly [number, boolean] = [1, true];
 |undefined|아직 값을 변수에 할당하지 않음|
 |void|return 문을 포함하지 않는 함수|
 |never|절대 반환하지 않는 함수|
+
+-----
+
+참고도서 : [타입스크립트 프로그래밍](http://www.yes24.com/Product/Goods/90265564)
