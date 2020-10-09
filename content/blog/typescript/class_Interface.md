@@ -781,3 +781,6 @@ class PersonClass {
 }
 ```
 [팩토리 패턴 심화](https://vallista.kr/2020/05/05/TypeScript-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%8C%A8%ED%84%B4/)
+
+[빌더 패턴 참고글 1](https://medium.com/@pks2974/typescript-%EC%99%80-%EC%83%9D%EC%84%B1-%ED%8C%A8%ED%84%B4-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC-58945ab5f2ce)
+[빌더 패턴 참고글 2](https://velog.io/@changhoi/GOF-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-2-Builder)
