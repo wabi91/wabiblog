@@ -6,8 +6,7 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-
-### 퀵 정렬이란?
+## 퀵 정렬이란?
 
 퀵 정렬은 가장 빠른 정렬 알고리즘 중 하나로, Divide and Conquer 방식을 사용한 알고리즘 이다.
 
@@ -23,7 +22,7 @@ draft: false
 > `제자리 정렬` 이란 ?<br/>
 부가적인 메모리 추가가 없이, 데이터가 저장된 공간 내에서 정렬을 한다.
 
-### Quick sort, 제자리 정렬이 아닌 방식 : 부가적 메모리 공간이 필요
+## Quick sort, 제자리 정렬이 아닌 방식 : 부가적 메모리 공간이 필요
 
 ```javascript
 function quickSort(arr) {
@@ -57,7 +56,7 @@ quickSort([5,1,1,2,0,0]);
 
 위 같은 방법은 이해하기에 쉽고 구현 또한 쉽지만, `제자리 정렬` 방식이 아니므로 메모리 공간 낭비가 심하기 때문에, `제자리 정렬` 방식이 더 많이 사용된다.
 
-### Quick sort, 제자리 정렬 방식 : 부가적 메모리 공간 불필요
+## Quick sort, 제자리 정렬 방식 : 부가적 메모리 공간 불필요
 
 <div style="background:#fff; border: 1px solid #fff; border-radius: 5px;">
   <img src="./images/quick-sort-example.png">
@@ -111,7 +110,7 @@ function quickSort(arr, leftIndex = 0, rightIndex = arr.length - 1) {
 
 ![](./images/quick-sort-log.png)
 
-### 시간복잡도
+## 시간복잡도
 
 |||
 |-|-|
@@ -124,7 +123,7 @@ pivot이 가장 작은 수이거나 가장 큰 수일 경우에는 두 배열로
 
 ---
 
-### 출처
+## 출처
 
 https://www.guru99.com/quicksort-in-javascript.html
 

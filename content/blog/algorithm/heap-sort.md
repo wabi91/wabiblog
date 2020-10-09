@@ -6,7 +6,7 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-### 힙 정렬이란?
+## 힙 정렬이란?
 
 `Binary Heaps` 힙이란, 최대값이나 최소값을 찾아내는 연산을 빠르게하기 위해 `완전 이진트리`를 기본으로한 자료구조. 이러한 자료구조를 최대 힙 또는 최소 힙 트리를 구성해 정렬을 하는 방법 (* 힙의 구조상, 부모-자식 관계의 정렬은 되지만, 형제간의 정렬은 고려대상이 아니다.)
 
@@ -25,14 +25,14 @@ draft: false
 |Max Heap|Min Heap|
 |![](./images/max_heap_example.jpg)|![](./images/min_heap_example.jpg)|
 
-#### 힙의 index 규칙성
+### 힙의 index 규칙성
 
 부모 노드 기준으로,<br />
 왼쪽의 인덱스는 `부모 index * 2 + 1` 이다.<br />
 오른쪽의 인덱스는 `부모 index * 2 + 2` 이다.
 
 
-#### Javascript 코드 예시
+### Javascript 코드 예시
 
 ```javascript
 // Max Heap
@@ -116,7 +116,7 @@ console.log(heap); // BinaryHeap { heap: [ 800, 700, 30, 20, 9, 5, 10, 7 ] }
 heap.extractMax(); // 800
 ```
 
-#### 힙 정렬, 장단점 정리
+### 힙 정렬, 장단점 정리
 
 - 단점
   - 안정성을 보장받지 못한다. (선택정렬과 마찬가지로, 값이 중복되었을 경우, 위치가 바뀔 수 있다. = 불안한 정렬)
@@ -129,7 +129,7 @@ heap.extractMax(); // 800
 
 -----
 
-### 출처
+## 출처
 https://www.tutorialspoint.com/data_structures_algorithms/heap_data_structure.htm
 
 https://gmlwjd9405.github.io/2018/05/10/algorithm-heap-sort.html
@@ -140,7 +140,7 @@ https://velog.io/@yujo/JS%ED%9E%99-%EC%A0%95%EB%A0%ACHeap-Sort-66pye5v9
 
 ---
 
-### "퀵 정렬 vs 힙 정렬"
+## "퀵 정렬 vs 힙 정렬"
 
 > 빅오 노테이션은 대략적인 측정 방법이다. n개의 문제(보통 처리해야 할 아이템의 개수가 된다.)가 주어졌을 때 알고리즘이 실행되는 동안 수행되는 오퍼레이션을 측정하되 상수와 계수는 제거한 측정값을 말한다. 힙 정렬 와 퀵 정렬 모두 평균적으로 O(NlogN)이지만 힙 정렬에는 특별한 작업이 있다. heapify 작업이다. 정렬 작업이 수행되면서 정렬된 값이 하나 정해져서 힙에서 빠져나오게 되면 엉클어진 힙을 다시 힙 형태로 만들기 위해 힙 내의 원소들끼리 자리를 바꾸는 heapify 동작이 수행된다. 데이터의 개수가 많지 않다면 큰 영향은 없겠지만, 굉장히 큰 데이터 집합을 대상으로 힙 정렬 작업이 수행된다면 퍼포먼스 차원에서 heapify 동작은 무시할 수 없게 된다.
 

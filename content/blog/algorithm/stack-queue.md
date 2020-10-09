@@ -6,13 +6,13 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-### 자료구조 스택 그리고 큐
+## 자료구조 스택 그리고 큐
 
 ![](./images/stack-queue.png)
 
 > 스택은 나중에 넣은 데이터가 먼저 나오는 형태이고, 큐는 먼저 넣은 데이터가 먼저 나오는 형태이다.
 
-### 스택 (Stack)
+## 스택 (Stack)
 
 `LIFO (Last In First Out), 후입선출` 이라고 불리는 자료구조
 
@@ -23,7 +23,7 @@ draft: false
 > 자료가 없을 때 Pop을 하면 Error로 "Stack Underflow" 가 발생하고, 반대로 자료의 크기가 스택의 크기를 넘게 데이터 삽입 Push를 하면, "Stack Overflow" Error가 발생한다.<br />
 재귀함수를 호출할 때 제한된 스택을 넘어설 경우, "Stack Overflow" 에러를 볼 수 있다.
 
-#### JavaScript 구현
+### JavaScript 구현
 
 ```javascript
 class Stack {
@@ -63,7 +63,7 @@ test.peek(); // 2
 test.contains(444); // false
 ```
 
-### 큐 (Queue)
+## 큐 (Queue)
 
 `FIFO (First Input First Out), 선입선출` 이라고 불리는 자료구조
 
@@ -74,7 +74,7 @@ test.contains(444); // false
   - 가장 마지막에 삽입된 자료의 위치를 가르키고, 삽입작업에 사용되는 리어(Rear) 포인터
 - 자바스크립트 엔진 내, 비동기 함수 실행시 콜백들이 대기열로 들어오는 `Task queue`가 대표적이다.
 
-#### JavaScript 구현
+### JavaScript 구현
 
 ```javascript
 class Queue {
@@ -114,7 +114,7 @@ test.contains(1); // false
 
 -----
 
-### 출처
+## 출처
 https://www.cs.cmu.edu/~adamchik/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html
 
 https://helloworldjavascript.net/pages/282-data-structures.html
