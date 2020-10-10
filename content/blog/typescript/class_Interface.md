@@ -759,10 +759,10 @@ Powder는 프로틴 5스푼 입니다.
 ### 참고도서
 [타입스크립트 프로그래밍](http://www.yes24.com/Product/Goods/90265564)
 ### 참고링크
-[타입스크립트 핸드북 : classes](https://typescript-kr.github.io/pages/classes.html)
-[enum을 사용하는 이유](https://medium.com/@seungha_kim_IT/typescript-enum%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-3b3ccd8e5552)
-[타입스크립트 클래스 블로그글](https://heecheolman.tistory.com/65)
-[자바스크립트 Class 소개](https://lacommune.tistory.com/170)
+- [타입스크립트 핸드북 : classes](https://typescript-kr.github.io/pages/classes.html)
+- [enum을 사용하는 이유](https://medium.com/@seungha_kim_IT/typescript-enum%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-3b3ccd8e5552)
+- [타입스크립트 클래스 블로그글](https://heecheolman.tistory.com/65)
+- [자바스크립트 Class 소개](https://lacommune.tistory.com/170)
 #### class static
 ```js
 class PersonClass {
@@ -780,7 +780,6 @@ class PersonClass {
     }
 }
 ```
-[팩토리 패턴 심화](https://vallista.kr/2020/05/05/TypeScript-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%8C%A8%ED%84%B4/)
-
-[빌더 패턴 참고글 1](https://medium.com/@pks2974/typescript-%EC%99%80-%EC%83%9D%EC%84%B1-%ED%8C%A8%ED%84%B4-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC-58945ab5f2ce)
-[빌더 패턴 참고글 2](https://velog.io/@changhoi/GOF-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-2-Builder)
+- [팩토리 패턴 심화](https://vallista.kr/2020/05/05/TypeScript-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4-%ED%8C%A9%ED%86%A0%EB%A6%AC-%ED%8C%A8%ED%84%B4/)
+- [빌더 패턴 참고글 1](https://medium.com/@pks2974/typescript-%EC%99%80-%EC%83%9D%EC%84%B1-%ED%8C%A8%ED%84%B4-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC-58945ab5f2ce)
+- [빌더 패턴 참고글 2](https://velog.io/@changhoi/GOF-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-2-Builder)
