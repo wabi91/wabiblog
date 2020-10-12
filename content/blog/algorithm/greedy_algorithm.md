@@ -122,7 +122,3 @@ print(dic)
 ## 출처
 
 https://gomguard.tistory.com/119
-
-https://jeongw00.tistory.com/168
-
-https://developer-mac.tistory.com/53
