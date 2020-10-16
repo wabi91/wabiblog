@@ -6,6 +6,7 @@ const S = {
     top: 0,
     background: '#fff',
     zIndex: 2,
+    marginBottom: '20px',
   },
   container: {
     display: 'flex',
@@ -23,6 +24,9 @@ const S = {
   },
   contents: {
     padding: '10px 0px 20px',
+    maxHeight: '13rem',
+    overflowY: 'scroll',
+    borderBottom: '1px solid rgb(238, 238, 238)',
   },
 }
 
