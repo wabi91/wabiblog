@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 
 const S = {
+  root: {
+    position: 'sticky',
+    top: 0,
+    background: '#fff',
+    zIndex: 2,
+  },
   container: {
     display: 'flex',
     cursor: 'pointer',
@@ -16,8 +22,7 @@ const S = {
     alignItems: 'center',
   },
   contents: {
-    overflow: 'hidden',
-    margin: '10px 0px 20px',
+    padding: '10px 0px 20px',
   },
 }
 
@@ -27,7 +32,7 @@ export const PostContentsTable = ({ html }) => {
     setIsOpenPanel(!isOpenPanel)
   }
   return (
-    <>
+    <div style={S.root}>
       <div style={S.container} onClick={handlePanel}>
         <div style={S.title}>목차</div>
         <div style={S.button}>{isOpenPanel ? '닫기' : '열기'}</div>
@@ -35,10 +40,10 @@ export const PostContentsTable = ({ html }) => {
       <div
         style={{
           ...S.contents,
-          height: isOpenPanel ? 'auto' : '0',
+          display: isOpenPanel ? 'block' : 'none',
         }}
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </>
+    </div>
   )
 }
