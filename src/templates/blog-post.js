@@ -6,6 +6,7 @@ import { Layout } from '../layout'
 import { Head } from '../components/head'
 import { PostTitle } from '../components/post-title'
 import { PostDate } from '../components/post-date'
+import { PostContentsTable } from '../components/post-contents-table'
 import { PostContainer } from '../components/post-container'
 import { SocialShare } from '../components/social-share'
 import { SponsorButton } from '../components/sponsor-button'
@@ -29,7 +30,6 @@ export default ({ data, pageContext, location }) => {
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
   const { title: postTitle, date } = post.frontmatter
-
   return (
     <Layout location={location} title={title}>
       <Head
@@ -38,6 +38,7 @@ export default ({ data, pageContext, location }) => {
       />
       <PostTitle title={postTitle} />
       <PostDate date={date} />
+      <PostContentsTable html={post.tableOfContents} />
       <PostContainer html={post.html} />
       {/* <SocialShare title={postTitle} author={author} /> */}
       {!!sponsor.buyMeACoffeeId && (
@@ -79,6 +80,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 280)
       html
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
