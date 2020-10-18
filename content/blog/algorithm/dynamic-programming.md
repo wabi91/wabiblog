@@ -30,42 +30,64 @@ limitPound = 6
 
 # 물건, 무게, 가치
 things = [
-  # ['다이아몬드',6,1000],
   ['물',3,10],
   ['책',1,3],
   ['음식',2,9],
   ['자켓',2,5],
   ['카메라',1,6],
+  # ['다이아몬드',6,1000],
 ]
 
-data = [[0] * limitPound for x in range(len(things))]
+# [] * number 로 배열을 만들면 해당 array의 프로퍼티를 공유하므로, [] for x in [] 로 만들어야한다.
+# 초기표 설정, 행 = 물건, 열 = 배낭, pound 1 ~ limitPound
+data = [[[0, []] for x in range(limitPound)] for x in range(len(things))]
 
+# 행을 loop 돌린다.
 for i in range(len(things)):
   pound = 1
-  
+  # 열을 loop 돌린다.
   while pound <= limitPound:
+    # [설정] pound 1부터 있기때문에 index 0으로 조정
     poundIdx = pound - 1
-    
-    prevMaxValue = 0
-    if i-1 >= 0:
-      prevMaxValue = data[i-1][poundIdx]
-    
-    thisValueWithRemainValue = 0
+    # [설정] 이전 최대값, 이전 최대물건 리스트
+    prevMaxValue, prevThings = [0, []]
+    # [설정] (가방최대치 - 물건 무게) 남은 무게의 최대값, 남은 무게의 최대물건 리스트
+    remainPoundMaxValue, remainPoundThings = [0, []]
+    # [설정] loop this, 현재의 가치, 현재 물건 리스트 초기화
+    thisValue, thisThings = [0, []]
+    # 현재 물건 무게가 가방의 제한 무게에 들어가는 경우
     if things[i][1] <= pound:
-      thisValueWithRemainValue += things[i][2]
-    if i-1 >= 0 and pound > things[i][1]:
-      thisValueWithRemainValue += data[i-1][poundIdx - things[i][1]]
+      thisValue, thisThings = [things[i][2], [things[i][0]]]
     
-    data[i][poundIdx] = max(prevMaxValue, thisValueWithRemainValue)
+    # 이전이 있을 경우
+    if i-1 >= 0:
+      prevMaxValue, prevThings = data[i-1][poundIdx]
+      # (가방최대치 - 물건 무게) 남은 무게가 0 초과일 경우
+      if pound - things[i][1] > 0:
+        remainPoundMaxValue, remainPoundThings = data[i-1][poundIdx - things[i][1]]
+        # 현재 정의한 무게를 뺀 남은 무게의 가방 최대치와 최대물건 리스트를 더한다.
+        thisValue += remainPoundMaxValue
+        thisThings += remainPoundThings
+    # 이전의 최대값과 현재의 최대값 비교, 높은 값을 데이터 현재 칸에 넣는다.
+    data[i][poundIdx][0] = max(prevMaxValue, thisValue)
+    # 이전의 최대값과 현재의 최대값 비교하고 높은 값의 물건 리스트를 현재 칸에 넣는다.
+    if prevMaxValue > thisValue:
+      data[i][poundIdx][1] = prevThings
+    else:
+      data[i][poundIdx][1] = thisThings
+    # loop의 기준 pound를 1 추가
     pound += 1
 
+
 print(*data, sep='\n')
-# [0, 0, 10, 10, 10, 10]
-# [3, 3, 10, 13, 13, 13]
-# [3, 9, 12, 13, 19, 22]
-# [3, 9, 12, 14, 19, 22]
-# [6, 9, 15, 18, 20, 25]
-print('최대 가치는', data[-1][-1], '이다.')
+# [[0, []], [0, []], [10, ['물']], [10, ['물']], [10, ['물']], [10, ['물']]]
+# [[3, ['책']], [3, ['책']], [10, ['물']], [13, ['책', '물']], [13, ['책', '물']], [13, ['책', '물']]]
+# [[3, ['책']], [9, ['음식']], [12, ['음식', '책']], [13, ['책', '물']], [19, ['음식', '물']], [22, ['음식', '책', '물']]]
+# [[3, ['책']], [9, ['음식']], [12, ['음식', '책']], [14, ['자켓', '음식']], [19, ['음식', '물']], [22, ['음식', '책', '물']]]
+# [[6, ['카메라']], [9, ['카메라', '책']], [15, ['카메라', '음식']], [18, ['카메라', '음식', '책']], [20, ['카메라', '자켓', '음식']], [25, ['카메라', '음식', '물']]]
+print('최대 가치는', data[-1][-1][0], '이다.')
 # 최대 가치는 25 이다.
+print('최적의 물건들은', ", ".join(data[-1][-1][1]), '이다.')
+# 최적의 물건들은 카메라, 음식, 물 이다.
 ```
 
