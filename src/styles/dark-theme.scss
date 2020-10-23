@@ -3,6 +3,20 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
+  // contentsListWrap
+  .contentsListWrap {
+    background-color: $dark-background-color;
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+  }
+
   // home
   .home-header {
     color: $dark-light-font-color;

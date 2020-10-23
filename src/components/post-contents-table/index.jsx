@@ -4,9 +4,10 @@ const S = {
   root: {
     position: 'sticky',
     top: 0,
-    background: '#fff',
     zIndex: 2,
     marginBottom: '20px',
+    borderBottomLeftRadius: '4px',
+    borderBottomRightRadius: '4px',
   },
   container: {
     display: 'flex',
@@ -36,12 +37,13 @@ export const PostContentsTable = ({ html }) => {
     setIsOpenPanel(!isOpenPanel)
   }
   return (
-    <div style={S.root}>
+    <div className="contentsListWrap" style={S.root}>
       <div style={S.container} onClick={handlePanel}>
         <div style={S.title}>목차</div>
         <div style={S.button}>{isOpenPanel ? '닫기' : '열기'}</div>
       </div>
       <div
+        className="scrollShow"
         style={{
           ...S.contents,
           display: isOpenPanel ? 'block' : 'none',
