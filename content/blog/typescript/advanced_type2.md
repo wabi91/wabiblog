@@ -283,7 +283,7 @@ Array.prototype.zip = function <T, U>(
   return this.map((val, idx) => tuple(val, list[idx]));
 }
 ```
-위 코드를 아래와 같이 사용 가능하다. 단, 프로젝트에서 zip.ts를 명시적으로 제외하도록 tsconfig.json에 exculde `./zip.ts` 를 추가해야한다.
+위 코드를 아래와 같이 사용 가능하다. 단, 프로젝트에서 zip.ts를 명시적으로 제외하도록 tsconfig.json에 exclude `./zip.ts` 를 추가해야한다.
 ```ts
 import './zip';
 [1, 2, 3].map(n => n * 2).zip(['a', 'b', 'c']);
