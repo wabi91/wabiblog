@@ -188,7 +188,7 @@ type Dialog = {
 function closeDialog(dialog: Dialog) {
   if (!dialog.id) return;
   setTimeout(() => {
-    removeFromDom(dialog, document.getElementById(dialog.id)!);
+    removeFromDom(dialog, document.getElementById(dialog.id!)!);
   });
 }
 
