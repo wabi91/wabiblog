@@ -13,8 +13,8 @@ K개의 가장 가까운 이웃 데이터를 이용하여 분류와 회귀 분�
 <table>
   <thead>
     <tr>
-      <td>장점</td>
-      <td>단점</td>
+      <th width="50%">장점</th>
+      <th width="50%">단점</th>
     </tr>
   </thead>
   <tbody>
