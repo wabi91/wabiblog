@@ -28,9 +28,9 @@ Client는 Resource Server에 기본적인 구조로 3개 Client ID, Secret key, 
 
 Resource Server의 A,B,C,D 기능 중 B,C 기능만 클라이언트에서 사용한다면 해당 기능만 권한이 있는 인증을 하면 된다.<br/>
 
-예로들어 "https://resource_server?client_id=1&scope=B,C&redirect_url=https://client/callback" 같은 주소로 Resource Owner 가 Resource Server로 접속을하면 현재 로그인 여부를 확인하고 로그인이 안되어있으면 로그인 페이지를 보여주고 로그인 후 해당 클라이언트 ID 여부를 확인하고 접속 시도 Redirect Url과 등록된 클라이언트 Redirect Url과 동일한지 확인 하고, 같다면 사용하고자하는 기능 스코프를 허용할 것인지 유저에게 확인하는 페이지를 보여주고 유저가 동의하면 해당 스코프 동의에 대한 정보 데이터를 저장.<br/>
+예로들어 `https://resource_server?client_id=1&scope=B,C&redirect_url=https://client/callback` 같은 주소로 Resource Owner 가 Resource Server로 접속을하면 현재 로그인 여부를 확인하고 로그인이 안되어있으면 로그인 페이지를 보여주고 로그인 후 해당 클라이언트 ID 여부를 확인하고 접속 시도 Redirect Url과 등록된 클라이언트 Redirect Url과 동일한지 확인 하고, 같다면 사용하고자하는 기능 스코프를 허용할 것인지 유저에게 확인하는 페이지를 보여주고 유저가 동의하면 해당 스코프 동의에 대한 정보 데이터를 저장.<br/>
 
-Access token을 발급 전 임시 비밀번호로 Authorization code를 Resource server는 Resource Owner에게 전달한다. 등록된 리다이렉트 URL과 같이, "https://client/callback?code=3" 이 처럼 전달을 받은 사용자(Resource Owner)는 해당 주소로 클라이언트에 접속하고 code를 전달받은 Client는 이제 Resource Owner를 거치지 않고 Resource Server에 Owner의 정보를 사용하도록 인증받는 과정을 진행한다. 클라이언트는 client_id, secret key, code, redirected url 총 4개를 서버에 전달하고 서버는 모든 정보가 맞는지 확인 후 다 맞다면 Access token을 발급한다.<br/>
+Access token을 발급 전 임시 비밀번호로 Authorization code를 Resource server는 Resource Owner에게 전달한다. 등록된 리다이렉트 URL과 같이, `https://client/callback?code=3` 이 처럼 전달을 받은 사용자(Resource Owner)는 해당 주소로 클라이언트에 접속하고 code를 전달받은 Client는 이제 Resource Owner를 거치지 않고 Resource Server에 Owner의 정보를 사용하도록 인증받는 과정을 진행한다. 클라이언트는 client_id, secret key, code, redirected url 총 4개를 서버에 전달하고 서버는 모든 정보가 맞는지 확인 후 다 맞다면 Access token을 발급한다.<br/>
 
 Access Token을 발급하기 전 이미 인증하는데 사용된 Authorization code를 지우고, token을 클라이언트에 발급한다. 이제 클라이언트는 해당 토큰으로 User의 정보로 기능 B, C를 사용할 수 있다.<br/>
 
