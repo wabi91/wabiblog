@@ -1,7 +1,7 @@
 ---
 title: OAuth2
 date: 2020-10-25 23:10:21
-category: etc
+category: web
 thumbnail: { thumbnailSrc }
 draft: false
 ---
@@ -48,7 +48,7 @@ curl https://~~~?access_token=<access_token>
 
 ### Refresh Token
 
-![](./images/Refresh_token.png)
+![](./images/refresh_token.png)
 
 access token의 유효기간이 지나면 invalid token error를 클라이언트에 반환하게 되고 클라이언트는 refresh token으로 다시 access token을 발급 받는다.
 
