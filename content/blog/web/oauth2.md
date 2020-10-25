@@ -60,4 +60,4 @@ access token의 유효기간이 지나면 invalid token error를 클라이언트
 ### 출처
 
 - [생활코딩](https://opentutorials.org/course/3405/22004)
-- [RFC](https://tools.ietf.org/html/rfc6749#section-1.5)
+- [RFC - 6749](https://tools.ietf.org/html/rfc6749#section-1.5)
