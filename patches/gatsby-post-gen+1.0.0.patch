@@ -1,0 +1,53 @@
+diff --git a/node_modules/gatsby-post-gen/lib/index.js b/node_modules/gatsby-post-gen/lib/index.js
+index 300e662..c0178c8 100644
+--- a/node_modules/gatsby-post-gen/lib/index.js
++++ b/node_modules/gatsby-post-gen/lib/index.js
+@@ -13,6 +13,9 @@ const TARGET_DIR = `${cwd}${CONTENTS_DIR}`
+ const IGNORE_DIR = 'images'
+ const UTF_8 = 'utf8'
+ const DATE_FORMAT = 'yyyy-MM-dd HH:MM:SS'
++const DATE_ARRAY = [
++  -1.5, -1, -0.5, 0, 0.5, 1, 1.5
++];
+ 
+ const ignoreFunc = (file, stats) =>
+   stats.isDirectory() && path.basename(file) == IGNORE_DIR
+@@ -119,9 +122,36 @@ const fetchTitle = async category => {
+   return title
+ }
+ 
+-module.exports = (async function() {
+-  const date = dateFns.format(new Date(), DATE_FORMAT)
++const fetchFakeDate = async () => {
++  const originDate = new Date().getTime()
++  const { res } = await inquirer.prompt([
++    {
++      type: 'list',
++      name: 'res',
++      message: 'Do you want fake date?: ',
++      choices: ['yes', 'no'],
++    },
++  ])
++  const isNeedFake = res === 'yes'
++  if (!isNeedFake) return dateFns.format(originDate, DATE_FORMAT)
++  const { dateTxt } = await inquirer.prompt([
++    {
++      type: 'list',
++      name: 'dateTxt',
++      message: 'How many day do u add?: ',
++      choices: DATE_ARRAY.map(_ => `${_} day`),
++    },
++  ])
++  const addDate = Number(dateTxt.replace(' day', '')) * 86400000
++
++  return dateFns.format(
++    originDate + addDate,
++    DATE_FORMAT
++  )
++}
+ 
++module.exports = (async function () {
++  const date = await fetchFakeDate()
+   log.info('📅 Create new post:', date)
+   log.start('🚚 Start to process!\n')
+ 
