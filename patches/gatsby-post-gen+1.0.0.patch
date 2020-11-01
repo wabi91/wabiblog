@@ -1,5 +1,5 @@
 diff --git a/node_modules/gatsby-post-gen/lib/index.js b/node_modules/gatsby-post-gen/lib/index.js
-index 300e662..c0178c8 100644
+index 300e662..acf92e0 100644
 --- a/node_modules/gatsby-post-gen/lib/index.js
 +++ b/node_modules/gatsby-post-gen/lib/index.js
 @@ -13,6 +13,9 @@ const TARGET_DIR = `${cwd}${CONTENTS_DIR}`
@@ -12,7 +12,7 @@ index 300e662..c0178c8 100644
  
  const ignoreFunc = (file, stats) =>
    stats.isDirectory() && path.basename(file) == IGNORE_DIR
-@@ -119,9 +122,36 @@ const fetchTitle = async category => {
+@@ -119,9 +122,42 @@ const fetchTitle = async category => {
    return title
  }
  
@@ -30,15 +30,21 @@ index 300e662..c0178c8 100644
 +  ])
 +  const isNeedFake = res === 'yes'
 +  if (!isNeedFake) return dateFns.format(originDate, DATE_FORMAT)
-+  const { dateTxt } = await inquirer.prompt([
++  const { addHour } = await inquirer.prompt([
 +    {
-+      type: 'list',
-+      name: 'dateTxt',
-+      message: 'How many day do u add?: ',
-+      choices: DATE_ARRAY.map(_ => `${_} day`),
++      type: 'input',
++      name: 'addHour',
++      message: 'How much hour do u add? (-,+ number): ',
++      validate: async val => {
++        if (isNaN(Number(val))) {
++          return 'type only number with -, +'
++        }
++
++        return true
++      },
 +    },
 +  ])
-+  const addDate = Number(dateTxt.replace(' day', '')) * 86400000
++  const addDate = Number(addHour) * 3600000
 +
 +  return dateFns.format(
 +    originDate + addDate,
