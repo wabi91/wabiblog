@@ -79,7 +79,34 @@ def solution(skill, skill_trees):
   return answer
 ```
 string slice를 한 첫번째 풀이에서 list로 변경하고 pop으로 비교하는 것이 바뀌었고, for-else로 마지막 인덱싱을 처리하던 로직이 간소화되서 한결 보기 편하다.
+## 문제 풀이 - 3 (deque 적용)
+```py
+from collections import deque
+
+def solution(skill, skill_trees):
+  answer = 0
+  for tree in skill_trees:
+    skillQue = deque(skill)
+    for treeSkill in list(tree):
+      if (treeSkill in skill) == True and treeSkill != skillQue.popleft():
+        break;
+    else:
+      answer += 1
+        
+  return answer
+```
+문제풀이 2번과 동일한 로직이지만 자료구조를 list에서 deque 로 변경하였다. 이유로는 list의 경우 pop을하면 메모리를 다시 재할당하게 되지만, deque는 popleft, pop을 통해 아이템을 삭제하여도 메모리 재할당하는 방식이 다르다.
+|리스트 list|덱 deque|
+|:-:|:-:|
+|O<sub>(n)</sub>|O<sub>(1)</sub>|
+
+> Deques have O(1) speed for appendleft() and popleft() while lists have O(n) performance for insert(0, value) and pop(0).
+
+![](./images/list-example-memory.png)
+[이미지 출처](https://j-ungry.tistory.com/189)
 
 ----
 
-[참고: 문제링크](https://programmers.co.kr/learn/courses/30/lessons/49993)
+- [참고: 문제링크](https://programmers.co.kr/learn/courses/30/lessons/49993)
+- [list vs deque 참고자료 - 1](https://stackoverflow.com/questions/23487307/python-deque-vs-list-performance-comparison)
+- [list vs deque 참고자료 - 2](https://j-ungry.tistory.com/189)
