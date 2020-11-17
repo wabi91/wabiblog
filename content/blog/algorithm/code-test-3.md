@@ -96,6 +96,7 @@ def solution(skill, skill_trees):
   return answer
 ```
 문제풀이 2번과 동일한 로직이지만 자료구조를 list에서 deque 로 변경하였다. 이유로는 list의 경우 pop을하면 메모리를 다시 재할당하게 되지만, deque는 popleft, pop을 통해 아이템을 삭제하여도 메모리 재할당하는 방식이 다르다.
+
 |리스트 list|덱 deque|
 |:-:|:-:|
 |O<sub>(n)</sub>|O<sub>(1)</sub>|
