@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스] 월간 코드 챌린지 시즌1 > 내적"
+title: "[프로그래머스] 내적"
 date: 2020-11-15 03:50:76
 category: algorithm
 thumbnail: { thumbnailSrc }

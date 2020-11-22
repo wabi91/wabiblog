@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스] 카카오인턴, 키패드 누르기"
+title: "[프로그래머스] 키패드 누르기"
 date: 2020-11-08 22:11:02
 category: algorithm
 thumbnail: { thumbnailSrc }
