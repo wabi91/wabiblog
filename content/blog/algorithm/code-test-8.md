@@ -57,7 +57,7 @@ def solution(d, budget):
     return answer
 ```
 
-- 결국에 한도 내에서 맞춰서 모든 물건을 사게 하려면 "Greedy Algorithm : 탐욕 알고리즘"을 써야된다.
+- 결국에 한도 내에서 맞춰서 모든 물건을 사게 하려면 ["Greedy Algorithm : 탐욕 알고리즘"](/algorithm/greedy_algorithm/)을 써야된다.
   - budget을 오름차순으로 정렬한 부서별 신청 금액을 loop 돌려서 금액을 - 해가면서 줄인다.
   - budget이 적어도 뺐을때 0 이상일 때만 빼게한다.
     - answer +1 추가
