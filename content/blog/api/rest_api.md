@@ -1,7 +1,7 @@
 ---
 title: "REST API 디자인 기본 컨샙"
 date: 2020-11-27 17:11:46
-category: database
+category: api
 thumbnail: { thumbnailSrc }
 draft: false
 ---
