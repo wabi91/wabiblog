@@ -3,7 +3,7 @@ import { rhythm } from '../../utils/typography'
 import './index.scss'
 import { Item } from './item'
 
-export const Category = ({ categories, category, selectCategory }) => {
+export const Category = ({ categories, category, selectCategory, perCategoryCount }) => {
   const containerRef = useRef(null)
 
   const scrollToCenter = useCallback(tabRef => {
@@ -27,7 +27,13 @@ export const Category = ({ categories, category, selectCategory }) => {
         margin: `0 -${rhythm(3 / 4)}`,
       }}
     >
-      <Item title={'All'} selectedCategory={category} onClick={selectCategory} scrollToCenter={scrollToCenter} />
+      <Item
+        title={'All'}
+        selectedCategory={category}
+        onClick={selectCategory}
+        scrollToCenter={scrollToCenter}
+        count={perCategoryCount.All || 0}
+      />
       {categories.map((title, idx) => (
         <Item
           key={idx}
@@ -35,6 +41,7 @@ export const Category = ({ categories, category, selectCategory }) => {
           selectedCategory={category}
           onClick={selectCategory}
           scrollToCenter={scrollToCenter}
+          count={perCategoryCount[title]}
         />
       ))}
     </ul>

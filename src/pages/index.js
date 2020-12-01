@@ -28,6 +28,17 @@ export default ({ data, location }) => {
     () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
     []
   )
+  const perCategoryCount = useMemo(() => _.reduce(posts, (acc, { node }) => {
+    const category = node.frontmatter.category
+    if (acc[category]) {
+      acc[category] += 1
+    } else {
+      acc[category] = 1
+    }
+    return acc
+  }, {
+    All: posts.length,
+  }), {})
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
 
@@ -52,6 +63,7 @@ export default ({ data, location }) => {
         categories={categories}
         category={category}
         selectCategory={selectCategory}
+        perCategoryCount={perCategoryCount}
       />
       <Contents
         posts={posts}
