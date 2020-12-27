@@ -1,7 +1,7 @@
 ---
 title: 쿠버네티스란
 date: 2020-12-27 19:12:59
-category: typescript
+category: docker
 thumbnail: { thumbnailSrc }
 draft: false
 ---
