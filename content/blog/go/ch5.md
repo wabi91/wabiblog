@@ -101,6 +101,7 @@ func main() {
 '
 FIFO<sup>First In First Out</sup> 데이터 구조로 먼저 입력한 데이터가 먼저 읽힌다.
 
+</br></br>
 --------
 
 출처: [『Tucker의 Go 언어 프로그래밍』](http://www.yes24.com/Product/Goods/99108736)</br>
