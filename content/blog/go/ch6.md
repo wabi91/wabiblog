@@ -1,5 +1,5 @@
 ---
-title: "Ch.6 > 연산자"
+title: "golang. 연산자"
 date: 2021-05-08 22:17:22
 category: go
 thumbnail: { thumbnailSrc }

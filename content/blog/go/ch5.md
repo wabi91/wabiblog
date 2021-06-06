@@ -1,5 +1,5 @@
 ---
-title: "Ch.5 > fmt 패키지를 이용한 텍스트 입출력"
+title: "golang. fmt 패키지를 이용한 텍스트 입출력"
 date: 2021-05-05 23:22:59
 category: go
 thumbnail: { thumbnailSrc }

@@ -1,5 +1,5 @@
 ---
-title: "Ch.7 > 함수"
+title: "golang. 함수"
 date: 2021-05-14 17:05:54
 category: go
 thumbnail: { thumbnailSrc }

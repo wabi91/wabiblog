@@ -1,5 +1,5 @@
 ---
-title: "Ch.3 > Hello Go World"
+title: "golang. Hello Go World"
 date: 2021-05-01 15:49:55
 category: go
 thumbnail: { thumbnailSrc }

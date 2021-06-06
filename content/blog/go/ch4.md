@@ -1,5 +1,5 @@
 ---
-title: "Ch.4 > 변수"
+title: "golang. 변수"
 date: 2021-05-03 23:08:59
 category: go
 thumbnail: { thumbnailSrc }

@@ -1,5 +1,5 @@
 ---
-title: "Ch.2 > 프로그래밍 언어"
+title: "golang. 프로그래밍 언어"
 date: 2021-05-01 15:12:12
 category: go
 thumbnail: { thumbnailSrc }

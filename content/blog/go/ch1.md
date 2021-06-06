@@ -1,5 +1,5 @@
 ---
-title: "Ch.1 > 컴퓨터 원리"
+title: "golang. 컴퓨터 원리"
 date: 2021-05-01 14:04:50
 category: go
 thumbnail: { thumbnailSrc }
