@@ -90,7 +90,7 @@ func main() {
 ```
 
 
-</br></br>
+
 --------
 
 출처: [『Tucker의 Go 언어 프로그래밍』](http://www.yes24.com/Product/Goods/99108736)</br>

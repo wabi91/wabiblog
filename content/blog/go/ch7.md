@@ -100,7 +100,7 @@ After 3
 
 > 재귀 호출 시에는 항상 탈출 조건을 명확히 해야 한다.
 
-</br></br>
+
 --------
 
 출처: [『Tucker의 Go 언어 프로그래밍』](http://www.yes24.com/Product/Goods/99108736)</br>
